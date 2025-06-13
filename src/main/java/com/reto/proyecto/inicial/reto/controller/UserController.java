@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/User")
 @RequiredArgsConstructor
-public class User {
+public class UserController {
 
     UserService userService;
 
@@ -17,7 +17,7 @@ public class User {
     }
 
     @PostMapping("/createUser")
-    public String CreateUser(@RequestBody User user) {
+    public String CreateUser(@RequestBody UserController user) {
         return "hola mundo";
     }
 }
