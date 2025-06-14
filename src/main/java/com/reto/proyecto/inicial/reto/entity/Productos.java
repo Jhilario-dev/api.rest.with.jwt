@@ -1,22 +1,24 @@
 package com.reto.proyecto.inicial.reto.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "productos")
 public class Productos {
 
-    String id;
-    String nombre;
-    Float precio;
-    float stock;
-    boolean activo;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nombre;
+    private Float precio;
+    private float stock;
+    private boolean activo;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

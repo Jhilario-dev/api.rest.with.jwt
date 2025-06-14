@@ -17,7 +17,7 @@ import java.util.function.Function;
 @Component
 public class JwtUtil {
 
-    @Value("${jwt.expiration}")
+//    @Value("${jwt.expiration}")
     private long jwtExpirationMs;
 
     private final String SECRET_KEY = "clavemuysegura_para_reto_123456789asdfghjklqwert";
